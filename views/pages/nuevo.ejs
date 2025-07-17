@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 class="title">Crear nuevo usuarios</h2>
+    <form action="/usuario/nuevo" method="post" enctype="multipart/form-data">
+        <div class="field">
+            <label for="name" class="label">Nombre</label>
+            <input type="text" class="input" name="nombre" >
+        </div>
+        <div class="field">
+            <label for="email" class="label">Correo</label>
+            <input type="email" class="input" name="correo" >
+        </div>
+        <div class="field">
+            <label for="edit_picture" class="label">Nueva Foto</label>
+            <input type="file" class="input" name="foto" >
+        </div>
+
+        <Button type="submit" class="button is-sucess mt-3">
+            Guardar cambios
+        </Button>
+
+
+    </form>
+</div>

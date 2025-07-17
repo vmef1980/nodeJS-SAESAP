@@ -1,0 +1,27 @@
+<div class="container">
+    <h2 class="title">Perfil de: <%= usuario.nombre %></h2>
+    <img class="image is-128x128" 
+        style="width: 50%; height: 50%;  margin-top: cover" 
+        src="<%= usuario.foto %>"
+        alt="<%= usuario.nombre %>">
+    <p>
+        <strong> Correo: </strong><%= usuario.correo %>
+    </p>
+    <a href="/" class="button is-link mt-3" >Volver</a>
+    
+    <a 
+        href="/usuarios/<%= usuario.id %>/editar"
+        class="button is-warning is-small ml-2 mt-2">Editar
+    </a>
+    
+    <form style="display: inline;"
+        action="/usuarios/<%= usuario.id %>/eliminar" 
+        method="POST">
+        <button type="submit" 
+            onclick="return confirm('¿Estas seguro de eliminar?')"
+            class="button is-danger is-small ml-2 mt-2">
+            Eliminar
+        </button>
+    </form>
+
+</div>

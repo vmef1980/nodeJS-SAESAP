@@ -1,0 +1,46 @@
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Lista de usuarios</h1>
+
+            <a href="/usuario/nuevo" class="button is-primary mb-4">
+                Nuevo Usuario
+            </a>
+
+            <div class="columns is-multiline">
+                <% usuarios.forEach(u => { %>
+                    <div class="column is-one-quarter">
+                        <div class="box has-text-centered">
+                            <img style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;" 
+                                src="<%= u.foto %>"
+                                alt="<%= u.nombre %>">
+                            <p class="subtitle">
+                                <strong>
+                                    <%=u.nombre %>
+                                </strong>
+                            </p>
+                            
+                            <a 
+                                href="/usuarios/<%= u.id %>"
+                                class="button is-link is-fullwidth">Ver perfil
+                            </a>
+                            <a 
+                                href="/usuarios/<%= u.id %>/editar"
+                                class="button is-warning is-small ml-2 mt-2">Editar
+                            </a>
+                            
+                            <form style="display: inline;"
+                                action="/usuarios/<%= u.id %>/eliminar" 
+                                method="POST">
+                                <button type="submit" 
+                                    onclick="return confirm('¿Estas seguro de eliminar?')"
+                                    class="button is-danger is-small ml-2 mt-2">
+                                    Eliminar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+

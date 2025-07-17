@@ -1,0 +1,25 @@
+{
+  "name": "ejemplo02",
+  "version": "1.0.0",
+  "description": "Mi Primer Aplicacion con Express",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Estrada",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^1.0.4",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "mysql2": "^3.14.2",
+    "nodemailer": "^7.0.5"
+  },
+  "devDependencies": {
+    "ejs": "^3.1.10",
+    "nodemon": "^3.1.10"
+  }
+}
