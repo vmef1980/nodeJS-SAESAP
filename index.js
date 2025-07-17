@@ -6,7 +6,7 @@ const express = require("express");
 const app = express();
 
 // Buscamos puerto disponible
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 // 127.0.0.1
 
 const path = require("path");
